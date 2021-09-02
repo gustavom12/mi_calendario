@@ -1,0 +1,46 @@
+@import ../../../main_styles/variables
+.CalendaryMonth
+  .arrow
+    cursor: pointer
+    transition: color .3s linear
+    &:hover
+      transition: color .3s linear
+      color: $primary
+  .weeks
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(7, 1fr)
+    .dayTitle
+      font-weight: 100
+    .day
+      font-size: 20px
+      color: #858585
+      font-weight: 500
+      height: 46px
+      width: 46px
+      border-radius: 50%
+      margin: 5px auto
+      background: #00000007
+      cursor: default
+      transition: all .3s linear
+      &.isNotInMonth
+        color: #c0c0c099
+        background: #00000005
+      &.actual
+        background: $primary !important
+        color: #fff !important
+        transition: all .3s linear
+        font-weight: 700
+        &.success
+          background: $success !important
+          transform: scale(1.2)
+          box-shadow: 0px 0px 10px 8px rgba($success,0.4)
+          -webkit-box-shadow: 0px 0px 10px 8px rgba($success,0.4)
+          -moz-box-shadow: 0px 0px 10px 8px rgba( $success ,0.4)
+      &.available
+        background: rgba( $primary , .05 )
+        color: rgba( $primary , .5 )
+        font-weight: 600
+        cursor: pointer
+        transition: all .3s linear
+        cursor: pointer

@@ -1,0 +1,58 @@
+@import ./variables
+@import ./classNames
+@import "/node_modules/bootstrap/scss/bootstrap.scss"
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap')
+
+body
+  margin: 0
+  font-family: Source Sans Pro,"sans-serif"
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  // -------- If want to change scroll bar ----------
+  overflow-x: hidden
+  &::-webkit-scrollbar-track
+    box-shadow: 0
+    background: #00000000
+  &::-webkit-scrollbar
+    width: .40em
+
+  &::-webkit-scrollbar-track
+    box-shadow: inset 0 0 6px #64646450
+    background: #ddd
+
+  &::-webkit-scrollbar-thumb
+    background-color: #00000099
+    border-radius: 20px
+
+a
+  text-decoration: none !important
+  color: $primary
+  cursor: pointer
+a:hover
+  text-decoration: none !important
+p
+  color: #747171
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@-moz-keyframes fadeIn
+  0%
+  opacity: 0
+  100%
+  opacity: 1
+
+@-webkit-keyframes fadeIn
+  0%
+  opacity: 0
+  100%
+  opacity: 1
+
+@-o-keyframes fadeIn
+  0%
+  opacity: 0
+  100%
+  opacity: 1

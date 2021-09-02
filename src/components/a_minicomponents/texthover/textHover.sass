@@ -1,0 +1,21 @@
+.textHover
+  font-size: 16px
+  padding: 3px 6px
+  top: calc( 100% + 10px  )
+  color: #fff
+  z-index: 100
+  max-width: 0
+  position: absolute
+  opacity: 0
+  transition: all ease-in-out .3s
+  visibility: none
+  float: left
+  overflow: hidden
+.textFather
+  position: relative
+  &:hover
+    .textHover
+      opacity: 1
+      visibility: visible
+      transition: all ease-in-out .5s
+      max-width: 200px

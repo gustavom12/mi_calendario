@@ -1,0 +1,21 @@
+@import ../../main_styles/variables
+.MyTurns
+  width: 550px
+  padding: 20px 7%
+  .Turn
+    padding: 10px 20px 10px 20px
+    border-radius: 5px
+    width: 98%
+    &.success
+      background: rgba($success, 0.2 )
+    &.danger
+      background: rgba(#ff0000, 0.2 )
+
+@media (max-width: 500px )
+  .MyTurns
+    width: 380px
+    h3
+      font-size: 18px
+    .fs-5
+      font-size: 16px !important
+    .Turn

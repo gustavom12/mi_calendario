@@ -1,0 +1,174 @@
+@import ../../main_styles/variables
+.scrollable
+  overflow-y: auto
+  &::-webkit-scrollbar-track
+    box-shadow: 0
+    background: #00000000
+  &::-webkit-scrollbar
+    width: .40em
+
+  &::-webkit-scrollbar-track
+    box-shadow: inset 0 0 6px #0e848850
+    background: #ddd
+
+  &::-webkit-scrollbar-thumb
+    background-color: #0057ff99
+    border-radius: 20px
+
+.CalendarySection
+  background: #fff
+  border-radius: 10px
+  border: 1px solid rgba( 255, 255, 255, 0.18 )
+  box-shadow: 0px 0px 20px -13px rgba(0,0,0,0.75)
+  -webkit-box-shadow: 0px 0px 20px -13px rgba(0,0,0,0.75)
+  -moz-box-shadow: 0px 0px 20px -13px rgba(0,0,0,0.75)
+  width: 90%
+  margin-top: 100px
+  min-height: 500px
+  margin: auto
+  border-radius: 7px
+  position: relative
+  .slide1
+    .column
+      padding: 22px 15px
+    .SelectType
+      width: 32%
+      padding: 22px 16px
+      border-right: 1px solid #00000050
+      .type
+        padding: 10px 14px
+        border-radius: 4px
+        cursor: pointer
+        transition: all linear .3s
+        &.success
+          transform: scale(0.80)
+          filter: blur(1.5px)
+          cursor: auto
+        &:hover
+          background: rgba( $primary , 0.05)
+          transition: all linear .3s
+        &.active
+          transition: all linear .3s
+          background: rgba( $primary , .2)
+          &.success
+            background: rgba( $success , .4)
+            filter: none
+            transform: none
+            cursor: pointer
+            box-shadow: 0px 0px 14px 7px rgba($success,0.25)
+            -webkit-box-shadow: 0px 0px 14px 7px rgba($success,0.25)
+            -moz-box-shadow: 0px 0px 14px 7px rgba( $success ,0.25)
+      h2
+        font-weight: 700
+        font-size: 23px
+        margin-top: -3px
+      h5, h6
+        color: #0000008f
+        font-size: 18px
+    .SelectDate
+      width: 100%
+      .CalendaryMonth
+        width: 62%
+      .SelectTime
+        padding-top: 45px
+        width: 38%
+        position: relative
+        padding-bottom: 70px
+        .scrollable
+          height: 320px
+        .buttonSubmitContainer
+          position: absolute
+          bottom: -25px
+          width: 84%
+          .buttonSubmit
+            &.btn-success
+              box-shadow: 0px 0px 14px 7px rgba($success,0.45)
+              -webkit-box-shadow: 0px 0px 14px 7px rgba($success,0.45)
+              -moz-box-shadow: 0px 0px 14px 7px rgba( $success ,0.45)
+              transform: scale(1.05)
+              transition: all ease-in-out .3s
+            &:disabled
+              background-color: rgba($primary, 0.50)
+        .time
+          height: 52px
+          width: 95%
+          margin-right: auto
+          border-radius: 4px
+          cursor: pointer
+          margin-top: 10px
+          border: 1px solid $primary
+          transition: all ease-in-out .15s
+          &:hover
+            border: 1.5px solid $primary
+            font-weight: 800 !important
+            transition: all ease-in-out .15s
+            background: rgba( $primary , 0.025)
+          &.active
+            border: 2px solid $primary
+            font-weight: 800 !important
+            transition: all ease-in-out .15s
+            background: rgba( $primary , 0.05)
+            &.success
+              color: $success !important
+              border-color: $success
+              background: rgba( $success , 0.1)
+              box-shadow: 0px 0px 7px 7px rgba($success,0.25)
+              -webkit-box-shadow: 0px 0px 7px 7px rgba($success,0.25)
+              -moz-box-shadow: 0px 0px 7px 7px rgba( $success ,0.25)
+          &.disabled
+            cursor: auto
+            transform: scale(0.80)
+            border: 1px solid #757474
+            color: #757474 !important
+            backdrop-filter: blur(10px)
+            transition: all ease-in-out .4s
+            filter: blur(1.5px)
+            &:hover
+              border: 1px solid #757474
+              background: #00000000
+              font-weight: 700 !important
+
+@media (max-width: 900px)
+  .CalendarySection
+    .slide1
+      flex-direction: column
+      .SelectType
+        width: 100%
+        border-bottom: 1px solid #ddd
+      // .SelectTime
+      //   width: 100%
+      // .SelectDate
+      //   .SelectTime
+      //     width: 100%
+      //     border-bottom: 1px solid #ddd
+      //     padding-bottom: 30px
+
+@media (max-width: 650px)
+  .CalendarySection
+    .SelectDate
+      flex-direction: column
+      align-items: center
+      .CalendaryMonth
+        width: 100% !important
+        border-bottom: 1px solid #ddd
+        padding-bottom: 30px
+      .SelectTime
+        width: 90% !important
+        .buttonSubmitContainer
+          width: 93% !important
+    h6
+      font-size: 24px !important
+
+@media (max-width: 450px)
+  .CalendarySection
+    .SelectType
+      h2
+        font-size: 19px !important
+    .CalendaryMonth
+      .weeks
+        .dayTitle
+          font-size: 13px !important
+      .day
+        width: 35px
+        height: 35px
+        font-size: 17px

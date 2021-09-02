@@ -1,0 +1,65 @@
+@import ../../../main_styles/variables
+.UserInputs
+  .fa-arrow-left
+    border-radius: 50%
+    padding: 10px
+    border: .5px solid #ddd
+  .leftCol
+    padding: 30px 10px 30px 30px
+    width: 33%
+    border-right: 1px solid #ddd
+    .typeName
+      font-size: 27px
+  .rightCol
+    padding: 30px 10px 30px 30px
+    width: 45%
+    input
+      padding: 10px 14px
+      min-height: 46px
+      color: rgb(26, 26, 26)
+      border: 1px solid #d0d0d0
+      border-radius: 8px
+      width: 100%
+      outline: none
+      transition: all 0.15s linear
+      &:focus
+        transition: all 0.15s linear
+        border: 2px solid #002fff !important
+    button
+      width: 90%
+      margin-top: 50px
+      font-size: 18px
+      border-radius: 20px
+      transition: all 0.3s linear
+      position: relative
+      overflow: hidden
+      .loading
+        position: absolute
+        left: 0px
+        bottom: 0px
+        width: 0%
+        height: 100%
+        background: #013eb990
+        display: flex
+        align-items: center
+        justify-content: center
+        overflow: hidden
+        animation: loading 2s ease infinite
+
+@keyframes loading
+  0%
+    width: 0px
+    left: 0px
+    right: auto
+  50%
+    width: 100%
+    left: 0
+    right: auto
+  51%
+    width: 100%
+    left: auto
+    right: 0px
+  100%
+    width: 0%
+    left: auto
+    right: 0%
