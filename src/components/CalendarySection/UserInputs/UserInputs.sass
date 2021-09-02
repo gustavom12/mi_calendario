@@ -63,3 +63,32 @@
     width: 0%
     left: auto
     right: 0%
+
+@media (max-width: 900px)
+  .UserInputs
+    .leftCol
+      width: 35%
+    .rightCol
+      width: 65%
+      padding-right: 60px
+
+@media (max-width: 650px)
+  .UserInputs
+    flex-direction: column !important
+    padding-top: 10px
+    .leftCol
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      padding: 0
+      .fa-calendar-week
+        position: relative
+        top: -5px
+    .rightCol
+      width: 100%
+      padding-right: 0
+      padding: 15px 10px 15px 15px
+      button
+        width: 100%

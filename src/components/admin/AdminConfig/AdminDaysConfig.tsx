@@ -68,7 +68,6 @@ const AdminDayConfig = () => {
       day.intervalo = "15"
       return day
     })
-    console.log(weekParsed)
     Post({ url: `${url}configuracion_registrar`, body: weekParsed })
   }
   return (

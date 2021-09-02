@@ -2,7 +2,7 @@
 
 const appConfig = {
   backendUrl: "http://localhost/apicalendario/",
-  onProduction: true,
+  onProduction: false,
   backendUrlProduction: "https://backphpapis.000webhostapp.com/"
 }
 

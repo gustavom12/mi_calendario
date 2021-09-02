@@ -63,6 +63,7 @@ const AdminDayExeption = () => {
     }
     dayConfig.intervalo = "15"
     dayConfig.fecha = selectedDay.format("yyyy-MM-DD")
+    console.log(JSON.stringify(dayConfig))
     postData.Post({url: `${url}fecha_config_registrar.php`, body: dayConfig})
   }
   return (
