@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import TurnResponseContext from '../../../context/turnResponseContext';
 import useFetch, { url } from '../../../helpers&hooks/useFetch';
-const SelectType = ({ selectedType, setSelectedType }: { selectedType: any, setSelectedType: any }) => {
+const SelectType = ({ selectedType, setSelectedType, setSelectedTime }: { setSelectedTime: any, selectedType: any, setSelectedType: any }) => {
   const { data }: { data: any, loading: boolean } = useFetch(`${url}categorias_listar.php`)
   const turnPostedData = useContext<any>(TurnResponseContext)
   useEffect(() => {
@@ -19,7 +19,10 @@ const SelectType = ({ selectedType, setSelectedType }: { selectedType: any, setS
               ${turnPostedData?.data?.result?.mensaje && "success"}
               `}
             onClick={() => {
-              if (!turnPostedData?.data?.result?.mensaje) setSelectedType(type)
+              if (!turnPostedData?.data?.result?.mensaje){
+                setSelectedTime(null)
+                setSelectedType(type)
+              }
             }}
             key={i}
           >

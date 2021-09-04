@@ -86,6 +86,7 @@ const CalendaryMonth = ({ isAdmin = false, selectedType, selectedTime, setSelect
                 if (day.isInCurrentMonth && day.date.valueOf() >= moment().subtract(1, "days").valueOf()) {
                   setSelectedDay(day.date.clone())
                   if (data?.result?.mensaje) setData(null)
+                  setSelectedTime(null)
                 }
               }}
             >

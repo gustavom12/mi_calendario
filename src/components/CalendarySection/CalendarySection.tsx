@@ -27,7 +27,11 @@ function CalendarySection() {
         allowTouchMove={false}
         >
         <SwiperSlide className="slide1 d-flex pb-1">
-          <SelectType selectedType={selectedType} setSelectedType={setSelectedType} />
+          <SelectType
+            selectedType={selectedType}
+            setSelectedType={setSelectedType}
+            setSelectedTime={setSelectedTime}
+            />
           <CalendaryMonth
             selectedType={selectedType}
             selectedTime={selectedTime}
